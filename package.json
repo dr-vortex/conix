@@ -1,0 +1,40 @@
+{
+	"name": "conix",
+	"version": "0.0.1",
+	"description": "An advanced conics section editor.",
+	"main": "src/index.js",
+	"scripts": {
+		"format:check": "npx prettier --check src/**/*.{html,js}",
+		"format:fix": "npx prettier --write src/**/*.{html,js}",
+		"format": "npm run format:check && npm run format:fix",
+		"lint:check": "npx eslint src/**/*.js",
+		"lint:fix": "npx eslint  --fix src/**/*.js",
+		"lint:check-ci": "npx eslint -f node_modules/eslint-formatter-azure-devops/index.js src/**/*.js",
+		"lint": "npm run lint:check && npm run lint:fix",
+		"deploy": "node scripts/deploy.js",
+		"test": "npm run format:check && npm run lint && npm run deploy"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/dr-vortex/conix.git"
+	},
+	"keywords": [
+		"conics",
+		"babylonjs"
+	],
+	"author": "Dr. Vortex",
+	"license": "Apache-2.0",
+	"bugs": {
+		"url": "https://github.com/dr-vortex/conix/issues"
+	},
+	"homepage": "https://github.com/dr-vortex/conix#readme",
+	"devDependencies": {
+		"eslint": "^8.32.0",
+		"prettier": "^2.8.3"
+	},
+	"dependencies": {
+		"@babylonjs/core": "^5.43.0",
+		"jquery": "^3.6.3",
+		"split.js": "^1.6.5"
+	}
+}

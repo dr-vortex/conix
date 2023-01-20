@@ -1,0 +1,33 @@
+body {
+	background-color: #222;
+	color: #ccc;
+	font-family: sans-serif;
+}
+
+#render, #panel-right, .gutter {
+	box-sizing: border-box;
+	float: left;
+	height: 500px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.gutter :hover {
+	cursor: col-resize;
+}
+
+#input-container, #output-container {
+	display: inline-block;
+	background-color: #444;
+	left: 1em;
+	width: calc(100% - 2em);
+	height: calc(50% - 2em);
+}
+
+#input-container {
+	top: 1em;
+}
+
+#output-container {
+	top: calc(50% + 1em);
+}
